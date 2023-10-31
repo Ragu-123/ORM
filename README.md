@@ -22,10 +22,33 @@ Enter the code for admin.py and models.py
 ### STEP 4:
 Execute Django admin and create 10 Football players
 
-## PROGRAM
+## PROGRAM:
+File: Models.py
+
+from django.db import models
+from django.contrib import admin
+
+class Employee (models.Model):
+    unique_number=models.CharField(max_length=20,primary_key=True)
+    name=models.CharField(max_length=100)
+    age=models.IntegerField()
+    email=models.EmailField()
+    job=models.CharField(max_length=100)
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=('unique_number','name','age','email','job')
+
+File: Admin.py
+
+from django.contrib import admin
+from .models import Employee,EmployeeAdmin
+
+admin.site.register(Employee,EmployeeAdmin)
 
 
-## OUTPUT
+## OUTPUT:
+![image](https://github.com/Ragu-123/ORM/assets/113915622/ee2181bc-de05-49c1-bf65-c4777344f4de)
+
 
 
 

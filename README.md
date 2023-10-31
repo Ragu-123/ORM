@@ -29,22 +29,23 @@ File: Models.py
 from django.db import models
 from django.contrib import admin
 
-class Employee (models.Model):
-    unique_number=models.CharField(max_length=20,primary_key=True)
+class footballplayer (models.Model):
+    numofmatch=models.IntegerField()
     name=models.CharField(max_length=100)
+    salary=models.IntegerField()
     age=models.IntegerField()
-    email=models.EmailField()
-    job=models.CharField(max_length=100)
+    height=models.IntegerField()
 
-class EmployeeAdmin(admin.ModelAdmin):
-    list_display=('unique_number','name','age','email','job')
+class footballplayerAdmin(admin.ModelAdmin):
+    list_display=('numofmatch','name','salary','age','height')
+
 
 File: Admin.py
 
 from django.contrib import admin
-from .models import Employee,EmployeeAdmin
+from .models import footballplayer,footballplayerAdmin
+admin.site.register(footballplayer,footballplayerAdmin)
 
-admin.site.register(Employee,EmployeeAdmin)
 ```
 
 ## OUTPUT:

@@ -23,6 +23,7 @@ Enter the code for admin.py and models.py
 Execute Django admin and create 10 Football players
 
 ## PROGRAM:
+```
 File: Models.py
 
 from django.db import models
@@ -44,7 +45,7 @@ from django.contrib import admin
 from .models import Employee,EmployeeAdmin
 
 admin.site.register(Employee,EmployeeAdmin)
-
+```
 
 ## OUTPUT:
 ![image](https://github.com/Ragu-123/ORM/assets/113915622/ee2181bc-de05-49c1-bf65-c4777344f4de)

@@ -23,31 +23,10 @@ Enter the code for admin.py and models.py
 Execute Django admin and create 10 Football players
 
 ## PROGRAM
-```
-Admin.py
 
-from django.contrib import admin
-from .models import footballplayer,footballplayerAdmin
-admin.site.register(footballplayer,footballplayerAdmin)
-
-Models.py
-
-from django.db import models
-from django.contrib import admin
-class footballplayer (models.Model):
-    numofmatch=models.IntegerField()
-    name=models.CharField(max_length=100)
-    salary=models.IntegerField()
-    age=models.IntegerField()
-    height=models.IntegerField()
-
-class footballplayerAdmin(admin.ModelAdmin):
-    list_display=('numofmatch','name','salary','age','height')
-```
 
 ## OUTPUT
 
-![image](https://github.com/Ragu-123/ORM/assets/113915622/99630027-0018-4aef-8660-fc21a8333d83)
 
 
 
